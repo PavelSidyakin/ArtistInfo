@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Artist Info</string>
+
+    <string name="artist_list_title">Artists</string>
+
+    <string name="error_general">Error. Tap to retry</string>
+
+    <string name="error_no_network">Check internet connection. Tap to retry</string>
+
+    <string name="list_delimiter">,\u0020</string>
+
+    <string name="volume">Volume\u0020</string>
+
+    <string name="artist_albums_toolbar_title">Albums</string>
+
+</resources>

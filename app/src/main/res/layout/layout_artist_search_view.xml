@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:paddingStart="8dp"
+              android:paddingEnd="8dp"
+              android:background="?appBackground"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <SearchView
+        android:theme="@style/ArtistSearchView"
+        android:background="@android:color/white"
+        android:queryBackground="@android:color/transparent"
+        android:id="@+id/sv_artist_search_view"
+        android:imeOptions="actionSearch"
+        android:iconifiedByDefault="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/pb_artist_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:indeterminate="true"
+        style="?android:attr/progressBarStyleHorizontal" />
+
+    <TextView
+        android:id="@+id/tv_artist_search_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/artist_list_title"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_artist_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".presentation.view.search.ArtistSearchViewFragment"
+        tools:listitem="@layout/recycler_item_artist_search"/>
+
+</LinearLayout>
